@@ -1,26 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Sidebar from './components/layouts/default/sidebar/Sidebar';
+import Header from './components/layouts/default/Header';
+import Footer from './components/layouts/default/Footer';
+import styled from 'styled-components';
 
-function App() {
+const ContentContainer = styled.div`
+    padding: 10px 20px 0;
+    margin-left: 230px;
+    z-index: 2;
+    min-height: 885px !important;
+        @media (max-width: 768px) {
+        margin-left:70px;
+    }
+`;
+const Content = styled.div`
+  margin-top: 3rem;
+  text-align:left;
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <div className="main_container">
+          <Sidebar />
+          <Header />
+          <ContentContainer>
+            <Content>
+              content
+              contenthgkgkhgk bkb kbjkbjh bkjhkjbjhlhh jkhghh bjkbjhb bjkhjh kjb jking
+              contenthgkgkhgk bkb kbjkbjh bkjhkjbjhlhh jkhghh bjkbjhb bjkhjh kjb
+              contenthgkgkhgk bkb kbjkbjh bkjhkjbjhlhh jkhghh bjkbjhb bjkhjh kjb
+            </Content>
+          </ContentContainer>
+          <Footer />
+          <span>learn react</span>
+        </div>
+      </div>
+    </Router >
   );
 }
-
 export default App;

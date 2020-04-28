@@ -1,38 +1,36 @@
+/* @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,600,700'); */
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  overflow: hidden;
+  background: #8d0000;
+  padding: 20px 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+  font-size: 25px;
+  padding: 12px;
+  font-weight: bold;
+}
+
+.bigprofile:hover {
+  background-color: #ddd;
+  color: black;
+  padding: 23px;
+}
+
+.header-right {
+  float: right;
 }
